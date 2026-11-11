@@ -21,3 +21,6 @@ output "ecs_service_name" {
 output "task_definition_family" {
   value = aws_ecs_task_definition.app.family
 }
+output "github_actions_role_arn" {
+  value = aws_iam_role.github_actions.arn
+}

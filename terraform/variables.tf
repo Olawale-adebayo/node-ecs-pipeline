@@ -15,3 +15,8 @@ variable "container_port" {
   type        = number
   default     = 3000
 }
+variable "github_repo" {
+  description = "GitHub repo allowed to deploy, as owner/name"
+  type        = string
+  default     = "Olawale-adebayo/node-ecs-pipeline"
+}
