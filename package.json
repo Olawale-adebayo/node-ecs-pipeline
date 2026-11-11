@@ -1,0 +1,14 @@
+{
+  "name": "node-ecs-pipeline",
+  "version": "1.0.0",
+  "description": "Node.js app deployed to ECS with GitHub Actions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
