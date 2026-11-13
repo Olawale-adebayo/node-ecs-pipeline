@@ -41,15 +41,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Show OIDC claims (debug)
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const token = await core.getIDToken('sts.amazonaws.com');
-            const claims = JSON.parse(Buffer.from(token.split('.')[1], 'base64url').toString());
-            core.info(`sub: ${claims.sub}`);
-            core.info(`aud: ${claims.aud}`);
-
       - name: Log in to AWS (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
